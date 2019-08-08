@@ -4,9 +4,28 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:View"
+        xmlns:controls="clr-namespace:View.Controls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="525" WindowState="Maximized" MinHeight="650" MinWidth="800" >
+    
+    <Window.Background>
+        <ImageBrush ImageSource="/images/background.jpg" Stretch="UniformToFill"/>
+    </Window.Background>
+    
     <Grid>
         
+        <Frame x:Name="Main" NavigationUIVisibility="Hidden" Source="StartScreen.xaml"/>
+        
+        <Button Width="190" Height="75" Content="Exit" Click="exit" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" HorizontalAlignment="right" VerticalAlignment="Bottom" FontSize="45" BorderBrush="Black" FontFamily="./Fonts/#MINECRAFT PE">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.504,1.5" StartPoint="0.504,0.03">
+                    <GradientStop Color="#00a7ff" Offset="0"/>
+                    <GradientStop Color="#c60000" Offset="0.567"/>
+                    <!--<GradientStop Color="Black" Offset="0.60"/> play around with color when you have time to spare-->
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        
     </Grid>
+    
 </Window>

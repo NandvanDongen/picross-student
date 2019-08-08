@@ -1,0 +1,7 @@
+Chicken
+5 5
+.x...
+xx.xx
+.xxx.
+.xxx.
+..x..

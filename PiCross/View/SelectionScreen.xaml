@@ -1,0 +1,57 @@
+﻿<Page x:Class="View.SelectionScreen"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:View"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="SelectionScreen">
+
+    <Page.Resources>
+        <Style x:Key="MINECRAFT PE">
+            <Setter Property="TextElement.FontFamily" Value="fonts/#MINECRAFT PE"/>
+        </Style>
+    </Page.Resources>
+
+    <Grid >
+        
+        <StackPanel Orientation="Vertical">
+            
+            <ItemsControl ItemsSource="{Binding Puzzels}" >
+                
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Button Width="275" Height="75" Margin="0,20,20,0" Click="Button_Click_1" Tag="{Binding}" Content="{Binding Author}"  FontSize="35" BorderBrush="Black" FontFamily="./Fonts/#MINECRAFT PE">
+                            <Button.Background>
+                                <LinearGradientBrush EndPoint="0.504,1.5" StartPoint="0.504,0.03">
+                                    <GradientStop Color="#00a7ff" Offset="0"/>
+                                    <GradientStop Color="#c60000" Offset="0.567"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
+                        </Button>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+                
+            </ItemsControl>
+            
+        </StackPanel>
+        
+        <Button Width="190" Height="75" Content="Home" Click="Button_Click" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="45" BorderBrush="Black" FontFamily="./Fonts/#MINECRAFT PE">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.504,1.5" StartPoint="0.504,0.03">
+                    <GradientStop Color="#00a7ff" Offset="0"/>
+                    <GradientStop Color="#c60000" Offset="0.567"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        
+    </Grid>
+    
+</Page>

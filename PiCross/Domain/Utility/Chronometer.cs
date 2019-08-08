@@ -11,7 +11,7 @@ namespace Utility
     {
         private DateTime lastTick;
 
-        private bool started;
+        public bool started;
 
         private Cell<TimeSpan> totalTime;
 
